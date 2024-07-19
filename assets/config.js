@@ -22,7 +22,7 @@ const imageBase = baseUrl ?? landingUrl;
     header: "Ofertë e Kufizuar",
     name: "Set me 24 pije energjike Red Bull + Frigorifer Markë",
     oldPrice: "5015L",
-    newPrice: "1000L",
+    newPrice: "200L",
     selectText: "",
     text: `
       Ky set i pijeve energjike Red Bull nuk do t'ju lërë indiferent! Energjia dhe gëzimi që kjo pije energjike ofron, do t'ju japë fuqi gjatë gjithë ditës. Dhe frigoriferi ruan shijen dhe freskinë e tij, kështu që mund të shijoni shijen në çdo kohë.
@@ -36,13 +36,13 @@ const imageBase = baseUrl ?? landingUrl;
     {
       user: "Ardian S*****",
       location: "Tiranë, Shqipëri",
-      action: "Sapo bleva një set të mrekullueshëm për 1000L!",
+      action: "Sapo bleva një set të mrekullueshëm për 200L!",
       timeago: "15 sekonda më parë",
     },
     {
       user: "Besnik B******",
       location: "Durrës, Shqipëri",
-      action: "Sapo bleva një set të mrekullueshëm për 1000L!",
+      action: "Sapo bleva një set të mrekullueshëm për 200L!",
       timeago: "25 sekonda më parë",
     },
   ];
@@ -219,11 +219,11 @@ const imageBase = baseUrl ?? landingUrl;
     main: {
       title: "Detajet e Porosisë",
       oldPrice: "5015L",
-      newPrice: "1000L",
+      newPrice: "200L",
       size: "Madhësia",
       subTotal: {
         title: "Nëntotali",
-        amount: "1000L",
+        amount: "200L",
       },
       delivery: {
         title: "Dorëzimi",
@@ -231,7 +231,7 @@ const imageBase = baseUrl ?? landingUrl;
       },
       total: {
         title: "Totali",
-        amount: "1000L",
+        amount: "200L",
       },
       checkoutButton: "Paguaj porosinë",
     },
