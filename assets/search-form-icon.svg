@@ -1,0 +1,4 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="fabric-icon-element fabric-search-v2-icon-element original" width="22"  height="22" ><defs><symbol id="search-v2" viewBox="0 0 22 22"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.3 9.75a7.55 7.55 0 1 1-15.1 0 7.55 7.55 0 0 1 15.1 0zm-1.918 6.697a8.75 8.75 0 1 1 .863-.833L21 20.17l-.866.83-4.752-4.553z" fill="#221D1D"></path></symbol></defs>
+			
+			<use xlink:href="#search-v2"></use>
+		</svg>
