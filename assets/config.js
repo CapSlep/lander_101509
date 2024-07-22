@@ -8,85 +8,80 @@ const landingUrl = baseHref + window.location.pathname;
 const imageBase = baseUrl ?? landingUrl;
 
 (function (exp) {
-  const countryCode = "al";
-  const lang = "sq-AL";
+  const countryCode = "hr";
+  const lang = "hr-HR";
   const locale = lang;
 
   const sizes = {
     enabled: false,
-    selectText: "Madhësia: ",
+    selectText: "Veličina: ",
     arr: []
   };
 
   const mainProduct = {
-    header: "Ofertë e Kufizuar",
-    name: "Set me 24 pije energjike Red Bull + Frigorifer Markë",
-    oldPrice: "5015L",
-    newPrice: "200L",
+    header: "Ograničena ponuda",
+    name: "24-dijelni set Red Bull energetskih pića + markirani hladnjak",
+    oldPrice: "50,00 €",
+    newPrice: "9,99 €",
     selectText: "",
     text: `
-      Ky set i pijeve energjike Red Bull nuk do t'ju lërë indiferent! Energjia dhe gëzimi që kjo pije energjike ofron, do t'ju japë fuqi gjatë gjithë ditës. Dhe frigoriferi ruan shijen dhe freskinë e tij, kështu që mund të shijoni shijen në çdo kohë.
-  <br><br>
-      Pija më e popullarizuar që nuk mund t'i rezistoni!
-  <br><br>
-      Nxito dhe përfito nga kjo mundësi e kufizuar!`,
+        Ovaj set Red Bull energetskih pića neće vas ostaviti ravnodušnima! Energija i radost koje ovo energetsko piće pruža, dat će vam snagu cijeli dan. A hladnjak čuva njegov okus i svježinu, tako da možete uživati u okusu u bilo koje vrijeme.
+    <br><br>
+       Najpopularnije piće kojem ne možete odoljeti!
+    <br><br>
+        Požurite i iskoristite ovu ograničenu priliku!`,
   };
 
   const notifications = [
     {
-      user: "Ardian S*****",
-      location: "Tiranë, Shqipëri",
-      action: "Sapo bleva një set të mrekullueshëm për 200L!",
-      timeago: "15 sekonda më parë",
+      user: "Ivan S*****",
+      location: "Zagreb, Hrvatska",
+      action: "Upravo sam kupio sjajan set za 9,99 €!",
+      timeago: "Prije 15 sekundi",
     },
     {
-      user: "Besnik B******",
-      location: "Durrës, Shqipëri",
-      action: "Sapo bleva një set të mrekullueshëm për 200L!",
-      timeago: "25 sekonda më parë",
+      user: "Marko B******",
+      location: "Split, Hrvatska",
+      action: "Upravo sam kupio sjajan set za 9,99 €!",
+      timeago: "Prije 25 sekundi",
     },
   ];
 
   const reviewsArr = [
     {
-      name: "Jakob",
-      time: "1 ditë më parë",
-      header: "Gjënë e dobishme!",
+      name: "Jakov",
+      time: "Prije 1 dan",
+      header: "Koristan uređaj!",
       product: "26468782",
-      review:
-        "Ky frigorifer është praktik, kompakt dhe zë shumë pak hapësirë. E vendosa në zyrë dhe tani gjithmonë mund të marr një pije të ftohtë.",
+      review: "Ovaj hladnjak je praktičan, kompaktan i zauzima vrlo malo prostora. Postavio sam ga u ured i sada uvijek mogu napuniti s hladnim pićem",
     },
     {
-      name: "Noah",
-      time: "5 ditë më parë",
-      header: "Shtytës i përkryer energjie!",
+      name: "Noa",
+      time: "Prije 5 dana",
+      header: "Savršen energetski poticaj!",
       product: "26468782",
-      review:
-        "Seti është shumë i bukur, në fillim nuk besoja që mund të kishte një çmim kaq të ulët, por erdhi në një pjesë të vetme, faleminderit RedBull për këtë aksion!",
+      review: "Set je vrlo lijep, isprva nisam mogao vjerovati da može imati tako nisku cijenu, ali stigao je u komadu, hvala RedBull na ovoj akciji!",
     },
     {
       name: "Elias",
-      time: "2 ditë më parë",
-      header: "Pija energjike e preferuar!",
+      time: "Prije 2 dana",
+      header: "Omiljeno energetsko piće!",
       product: "26468782",
-      review:
-        "Unë e dua Red Bull, pi pije energjike gjithmonë.",
+      review: "Volim Red Bull, stalno pijem energetska pića.",
     },
     {
       name: "David",
-      time: "3 ditë më parë",
-      header: "Pija më e mirë energjike!",
+      time: "Prije 3 dana",
+      header: "Ovo je najbolji energetski napitak!",
       product: "26468782",
-      review:
-        "Asnjëherë nuk kam dyshuar në cilësinë e kësaj pijeje, është kaq e pasur dhe e këndshme në shije, dhe frigoriferi u përshtat në mënyrë perfekte me ambientin tim.",
+      review: "Nikada nisam sumnjao u kvalitetu ovog pića, tako je bogat i ugodan za nepce, a hladnjak se savršeno uklopio u moj interijer.",
     },
     {
-      name: "Jonas",
-      time: "5 ditë më parë",
-      header: "Fitorja është në anën time!",
+      name: "Ivan",
+      time: "Prije 5 dana",
+      header: "Pobjeda je na mojoj strani!",
       product: "26468782",
-      review:
-        "Gjithmonë e dija që mund të fitoja këtë aksion, sepse i dua pijet energjike.",
+      review: "Uvijek sam znao da mogu osvojiti ovu akciju jer volim energetska pića.",
     },
   ];
 
@@ -94,146 +89,146 @@ const imageBase = baseUrl ?? landingUrl;
     reviews: reviewsArr,
     rr: "",
     percent: "",
-    rec: "komente për këtë aksion",
+    rec: "Komentari na ovu akciju",
   };
 
   const questions = {
-    _of: "Pyetja {1}/{2}:",
+    _of: "Pitanje {1}/{2}:",
     arr: [
       {
-        q: "A keni blerë më parë produkte Red Bull?",
-        a: ["PO", "JO"],
+        q: "Jeste li već kupovali Red Bull proizvode?",
+        a: ["DA", "NE"],
       },
       {
-        q: "Për kë është ky set?",
+        q: "Za koga je ovaj set?",
         a: [
-          "për familjen",
-          "për një mik",
-          "Për mua",
+          "za obitelj",
+          "za prijatelja",
+          "za mene"
         ],
       },
       {
-        q: "A do të rekomandonit produktet tona te miqtë tuaj?",
-        a: ["PO", "JO"],
+        q: "Biste li preporučili naše proizvode svojim prijateljima?",
+        a: ["DA", "NE"],
       },
     ],
   };
 
   const check = {
-    title: "Përgjigjja juaj do të shqyrtohet.",
+    title: "Vaš odgovor će biti pregledan.",
     arr: [
-      "3/3. Ju keni përgjigjur pyetjes.",
-      "Adresa juaj IP nuk tregon ndonjë kërkesë të mëparshme për ne.",
-      "Përgjigjja juaj është konfirmuar.",
+      "3/3. Odgovorili ste na pitanje.",
+      "Vaša IP adresa ne pokazuje prethodne narudžbe.",
+      "Vaš odgovor je potvrđen.",
     ],
   };
 
   const modals = {
     welcome: {
       texts: {
-        header: "Urime, ju konfirmuat që jeni një person i vërtetë",
+        header: "Čestitamo, potvrdili ste da ste stvarna osoba",
         button: "OK",
         text: `
-      <center>
-      Sot, {date}, ju keni mundësinë të fitoni një set me 24 pije energjike Red Bull + Frigorifer Markë.
-        <br><br>
-      Ju duhet vetëm të zgjidhni kutinë e saktë të dhuratës.
-        <br><br>
-      Ju keni 3 përpjekje, fat të mirë!
-      </center>
-    `,
+        <center>
+        Danas, {date}, imate priliku osvojiti set od 24 Red Bull energetska pića + markirani hladnjak.
+          <br><br>
+        Potrebno je samo odabrati pravu poklon kutiju.
+          <br><br>
+        Imate 3 pokušaja, sretno!
+        </center>
+      `,
       },
     },
     first: {
       texts: {
-        header: "Oh jo...",
+        header: "Ah, ne...",
         button: "OK",
         text: `
-      <center>
-    Fatkeqësisht kjo dhuratë është bosh! Ju keni edhe 2 përpjekje, fat të mirë!
-      </center>
-    `,
+        <center>
+      Nažalost, ovaj poklon je prazan! Imate još 2 pokušaja, sretno!
+        </center>
+      `,
       },
     },
     win: {
       texts: {
-        header: "Urime! Ju fituat!",
+        header: "Čestitamo! Osvojili ste!",
         button: "OK",
         text: `
-      <center>
-        <p style="color: #000">
-         Ju fituat setin „24 pjesë Red Bull Energy Drink“ + Frigorifer Markë
-        </p>
-        <br>
-          1) Klikoni "OK" për të shkuar te faqja e dërgesës.
-          <br><br>
-          2) Plotësoni formularin dhe paguani porosinë duke përfituar nga zbritja juaj personale.
-          <br><br>
-          3) Paketa do të dorëzohet brenda 2-3 ditësh.
-      </center>
-    `,
+        <center>
+          <p style="color: #000">
+           Osvojili ste „24-dijelni set Red Bull energetskih pića“ + markirani hladnjak
+          </p>
+          <br>
+            1) Kliknite "OK" da biste prešli na stranicu za dostavu.
+            <br><br>
+            2) Ispunite obrazac i platite narudžbu uzimajući u obzir vaš osobni popust.
+            <br><br>
+            3) Paket će biti dostavljen u roku od 2-3 dana.
+        </center>
+      `,
       },
     },
   };
 
   const cartSteps = {
     personal: {
-      title: "Të Dhënat Personale",
+      title: "Osobni podaci",
       fields: {
         name: {
-          field: "Emri",
+          field: "Ime",
         },
         family: {
-          field: "Mbiemri",
+          field: "Prezime",
         },
         phone: {
-          field: "Numri i telefonit",
+          field: "Telefonski broj",
         },
         email: {
-          field: "Email",
+          field: "E-mail",
         },
       },
     },
     delivery: {
-      title: "Dorëzimi",
+      title: "Dostava",
       fields: {
         city: {
-          field: "Qyteti",
+          field: "Grad",
         },
         address: {
-          field: "Adresa e dorëzimit",
+          field: "Adresa za dostavu",
         },
         zip: {
-          field: "Kodi postar",
+          field: "Poštanski broj",
         },
       },
     },
     payment: {
-      title: "Metodat e Pagesës",
-      creditCard: "Pagesë online me kartë bankare",
+      title: "Način plaćanja",
+      creditCard: "Online plaćanje karticom",
     },
   };
 
   const cart = {
     steps: cartSteps,
     main: {
-      title: "Detajet e Porosisë",
-      oldPrice: "5015L",
-      newPrice: "200L",
-      size: "Madhësia",
+      title: "Pregled narudžbe",
+      oldPrice: "50,00 €",
+      newPrice: "9,99 €",
+      size: "Veličina",
       subTotal: {
-        title: "Nëntotali",
-        amount: "200L",
+        title: "Ukupno bez dostave",
+        amount: "9,99 €",
       },
       delivery: {
-        title: "Dorëzimi",
-        amount: "0L",
+        title: "Dostava",
+        amount: "0,00 €",
       },
       total: {
-        title: "Totali",
-        amount: "200L",
+        title: "Ukupno",
+        amount: "9,99 €",
       },
-      checkoutButton: "Paguaj porosinë",
+      checkoutButton: "Naručite",
     },
   };
 
@@ -254,8 +249,9 @@ const imageBase = baseUrl ?? landingUrl;
   ];
 
   const footer = {
-    cr: "© 2024 RedBull. Të gjitha të drejtat të rezervuara.",
+    cr: "© 2024 RedBull. Sva prava pridržana.",
   };
+
 
 
   const pathImgBox = {
